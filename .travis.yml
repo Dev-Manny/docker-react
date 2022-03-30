@@ -4,7 +4,7 @@ services:
 
 
 before_install:
-  - docker build -t Dev-Manny/docker-react -f Dockerfile.dev .
+  - docker build -t dev-manny/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run Dev-Manny/docker-react npm run test -- --coverage
+  - docker run dev-manny/docker-react npm run test -- --coverage
