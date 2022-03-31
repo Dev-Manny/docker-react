@@ -7,4 +7,4 @@ before_install:
   - docker build -t dev-manny/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run dev-manny/docker-react npm run test -- --coverage
+  - docker run -e CI=true dev-manny/docker-react npm run test -- --coverage --watchAll=false
